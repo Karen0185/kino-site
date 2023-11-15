@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  &::-webkit-scrollbar {
+    display: none;
+}
+}
+
+.App {
+  font-family: 'Roboto';
+  
+  
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .logo {
+    color: #fff;
+    font-family: 'Roboto';
+    cursor: pointer;
+
+    h1 {
+      font-weight: 900;
+    }
+
+    h1::first-letter {
+      color: #FF3838;
+    }
+  }
+
+  .nav {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    .search {
+      display: flex;
+      align-items: center;
+      width: 200px;
+      height: 30px;
+      position: relative;
+      z-index: 1;
+      margin-top: 4px;
+      border-radius: 50px;
+      background-color: #fff;
+      transition: all .3s ease-in-out;
+      padding-left: 5px;
+      cursor: pointer;
+
+      .serachResult {
+        background-color: #fff;
+        position: absolute;
+        transition: all .2s ease-in-out;
+        opacity: 0;
+        height: 0;
+        width: 200%;
+        left: -50%;
+        top: 40px;
+        padding: 30px;
+        overflow: hidden;
+        filter: blur(10px);
+
+        .wrapper {
+          width: calc(100% + 4px);
+          height: 100%;
+          padding-right: 6px;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: #333;
+            border-radius: 50px;
+          }
+
+          .film {
+            margin-bottom: 10px;
+            background-color: #fff;
+            display: flex;
+            position: relative;
+            transition: all .2s ease-in-out;
+            overflow: hidden;
+            border-radius: 10px;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+
+            .film_bg {
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+              filter: blur(30px);
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+            
+            &:hover {
+              background-color: #121212;
+              
+              * {
+                color: #fff;
+              }
+            }
+
+            .filmInfo {
+              margin-left: 10px;
+              color: #000;
+              font-size: 14px;
+              padding: 5px 0;
+
+              .rating {
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+                left: 70px;
+                font-size: 12px;
+                bottom: 9px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+            }
+
+            .rating-green{
+                background-color: #4B8600;
+                color: #8FFF00;
+            }
+
+            .rating-orange{
+                background-color: #865000;
+                color: #FF9900;
+            }
+
+            .rating-red{
+                background-color: #AA2626;
+                color: #FF3838;
+            }
+            }
+          }
+
+          .avatar img {
+            width: 60px;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &.open {
+          width: 200px;
+          justify-content: flex-start;
+        }
+
+        .serachResult.show {
+          width: 200%;
+          height: 500px;
+          border-radius: 10px;
+          position: absolute;
+          transition: all .2s ease-in-out;
+          left: -50%;
+          top: 40px;
+          padding: 10px;
+          opacity: 1;
+          filter: blur(0px);
+          
+        }
+
+      input {
+        border: none;
+        outline: none;
+        background-color: #fff;
+        width: 90%;
+        color: #333;
+        padding-left: 30px;
+      }
+
+
+      .icon {
+        font-size: 20px;
+        height: 20px;
+        position: absolute;
+        z-index: 5;
+        background-color: #fff;
+        color: #000;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+
+      li {
+        margin-right: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .slider {
+    max-width: 80% !important;
+  }
+}
+
+
+@media (max-width: 1440px) {
+
+    .container {
+        max-width: 1170px;
+    }
+
+    .slider {
+      max-width: 1170px !important;
+    }
+
+    .card {
+      margin: 50px 17px !important;
+    }
+
+    .film_list  {
+      margin-left: 0 !important;
+    }
+
+    .serachResult.show {
+      width: 150% !important;
+
+      .film {
+        height: 90px;
+      }
+    }
+}
+
+@media (max-width: 1366px) {
+
+  .container {
+      max-width: 80%;
+  }
+
+  .slider {
+    max-width: 80% !important;
+  }
+
+  .card {
+    width: 180px !important;
+  }
+
+  .film_list  {
+    margin-left: 0 !important;
+  }
+
+  .serachResult.show {
+    width: 150% !important;
+
+    .film {
+      height: 90px;
+    }
+  }
+
+  li {
+    font-size: 14px !important;
+  }
+
+  .FilmPage .film .top_content {
+    flex-direction: column;
+  }
+
+  .FilmPage .film .film-description {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .FilmPage .film .top_content .left-content .film-poster {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+
+  
+
+  .film_list  {
+    justify-content: center;
+  }
+
+  li {
+    font-size: 12px !important;
+  }
+
+  .title {
+    text-align: center !important;
+  }
+
+  .FilmPage .film .film-description {
+    font-size: 12px;
+  }
+
+  .nav  {
+    display: none;
+  }
+
+  .Header {
+    height: 80px;
+
+    .burgerMenu.open {
+      width: 100%;
+      height: 100vh;
+      background-color: #0c0c0c;
+      position: fixed;
+      left: 0;
+      top: 0;
+      transition: all .2s ease-in;
+    }
+  
+    .burgerMenu.open .nav  {
+      opacity: 1;
+      color: #fff;
+      display: block;
+      pointer-events: all;
+      transition:  .2s ease-in;
+
+
+  
+      ul {
+        flex-direction: column;
+        margin-top: 50px;
+        
+        li {
+          font-size: 16px !important;
+          margin-bottom: 10px;
+        }
+      }
+  
+      .search {
+        margin: 20px auto;
+      }
+  
+      
+    }
+
+    .burgerMenu {
+
+
+      .burger__lines {
+
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        cursor: pointer;
+
+        .line {
+          width: 30px;
+          height: 3px;
+          background-color: #fff;
+          margin: 5px 0;
+          border-radius: 50px;
+          transition: all .2s ease-in;
+        }
+
+        &.open {
+          top: 45px;
+          :nth-child(1) {
+            transform: rotate(-45deg);
+          transition: all .2s ease-in;
+
+
+          }
+          :nth-child(2) {
+            margin: -8px;
+            width: 0;
+            height: 0;
+            transition: all .2s ease-in;
+
+
+          }
+          :nth-child(3) {
+            transform: rotate(45deg);
+          transition: all .2s ease-in;
+
+          }
+        }
+        
+      }
+      
+      
+      .nav  {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    .serachResult.show {
+      width: 200% !important;
+      height: 300px;
+  
+      .film {
+        height: 90px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .film-name {
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+
+  .FilmPage .film .top_content .left-content {
+    flex-direction: column;
+  }
+
+  .FilmPage .film .top_content .left-content .film-info {
+    margin-left: 0px;
+    margin-bottom: 50px;
+}
+
+  .film-poster {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .Offer .offer__content .title h1 {
+    font-size: 80px;
+    line-height: 80px;
+    text-align: left;
+  }
+
+  .Offer .offer__content .film-info {
+    font-size: 12px;
+  }
+}

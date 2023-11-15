@@ -1,0 +1,207 @@
+
+.FilmPage {
+    width: 100%;
+    height: auto;
+    padding-bottom: 150px;
+
+    .container {
+        padding-top: 150px;
+    }
+
+    .film {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+
+        .top_content {
+            display: flex;
+            .left-content {
+                display: flex;
+                
+                .film-poster {
+                    width: 300px;
+                    height: 400px;
+                    overflow: hidden;
+            
+                    img {
+                        width: 300px;
+                        height: 400px;
+                        object-fit: cover;
+                        object-position: center;
+                        border-radius: 10px;
+                    }
+                }
+    
+                .film-info {
+                    margin-left: 50px;
+    
+                    .genres {
+                        color: #ffffff80;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                    }
+    
+                    .restrictions {
+                        margin-top: 10px;
+                        width: 40px;
+                        p {
+                            background-color: #FF3838;
+                            color: #fff;
+                            font-family: 'Bebas Neue';
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 2px 10px;
+                            font-size: 20px;
+                            border-radius: 5px;
+                        }
+                    }
+    
+                    .rating {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 8px;
+                        right: 8px;
+                        bottom: 8px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+        
+                    .rating-green{
+                        background-color: #4B8600;
+                        color: #8FFF00;
+                    }
+        
+                    .rating-orange{
+                        background-color: #865000;
+                        color: #FF9900;
+                    }
+        
+                    .rating-red{
+                        background-color: #AA2626;
+                        color: #FF3838;
+                    }
+    
+                    .film-name {
+                        color: #fff;
+                        font-size: 90px;
+                        text-transform: uppercase;
+                        width: 400px;
+                        font-weight: bolder;
+                        line-height: 90px;
+                        font-family: 'Bebas Neue';
+                    }
+                    
+    
+                }
+            }
+    
+            .right-content {
+                display: flex;
+            }
+        }
+
+
+        .film_iamges {
+            margin: 0 auto;
+            margin-top: 30px;
+            img,video {
+                width: 450px;
+                height: 200px;
+                margin: 10px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        .film-description {
+            color: #fff;
+            letter-spacing: 1px;
+            font-size: 16px;
+            padding-left: 20px;
+        }
+    
+        .title {
+            font-family: 'Roboto';
+            font-weight: bolder;
+            color: #ffff;
+            font-size: 40px;
+            width: 100%;
+            margin-top: 70px;
+        }
+        .similar {
+            display: flex;
+            flex-wrap: wrap;
+            
+            .card {
+                width: 200px;
+                height: 300px;
+                color: #fff;
+                margin: 50px 20px;
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+        
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        
+                .poster {
+                    width: 200px;
+                    height: 300px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                    position: relative;
+    
+                    .rating {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 8px;
+                        right: 8px;
+                        bottom: 8px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+                .rating-green{
+                    background-color: #4B8600;
+                    color: #8FFF00;
+                }
+    
+                .rating-orange{
+                    background-color: #865000;
+                    color: #FF9900;
+                }
+    
+                .rating-red{
+                    background-color: #AA2626;
+                    color: #FF3838;
+                }
+    
+                    img {
+                        width: 100%;
+                    }
+                }
+        }
+    
+        .icon {
+            color: #FF3838;
+        }
+    }
+    .bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        filter: blur(100px);
+        z-index: -1;
+        transition: all .3s ease-in-out;
+        width: 100%;
+        transform: scale(.8);
+        height: 100%;
+    }
+    
+}
