@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/kino-site/static/css/main.bdef60a0.css",
-    "main.js": "/kino-site/static/js/main.2a56a6a7.js",
+    "main.js": "/kino-site/static/js/main.b97f7e9e.js",
     "static/js/787.fad29889.chunk.js": "/kino-site/static/js/787.fad29889.chunk.js",
     "static/media/avatar.jpg": "/kino-site/static/media/avatar.bd23d4fe8f67d224841a.jpg",
     "static/media/joker.jpg": "/kino-site/static/media/joker.c92acfcd8694799c0c3b.jpg",
     "static/media/harry_potter.jpg": "/kino-site/static/media/harry_potter.e55b81b90df5c797d07a.jpg",
     "index.html": "/kino-site/index.html",
     "main.bdef60a0.css.map": "/kino-site/static/css/main.bdef60a0.css.map",
-    "main.2a56a6a7.js.map": "/kino-site/static/js/main.2a56a6a7.js.map",
+    "main.b97f7e9e.js.map": "/kino-site/static/js/main.b97f7e9e.js.map",
     "787.fad29889.chunk.js.map": "/kino-site/static/js/787.fad29889.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bdef60a0.css",
-    "static/js/main.2a56a6a7.js"
+    "static/js/main.b97f7e9e.js"
   ]
 }
