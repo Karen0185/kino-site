@@ -3,6 +3,9 @@ import { FaCalendarAlt } from 'react-icons/fa'
 import { MdTimer } from 'react-icons/md'
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import avatarBg from '../assets/images/avatar.jpg' 
+import haryyPotterBg from '../assets/images/harry_potter.jpg' 
+import jokerBg from '../assets/images/joker.jpg' 
 import '../assets/style/Offer.scss'
  
 const Offer = ({currentFilm}) => {
@@ -10,7 +13,7 @@ const Offer = ({currentFilm}) => {
     const [slideCount, setSlideCount] = useState(0)
     const sliderItems = [
         {
-            offer: 'https://thathashtagshow.com/wp-content/uploads/2019/08/Joker-1.jpg',
+            offer:  jokerBg,
             nameEn: 'JOKER',
             year: '2019',
             rating: 10,
@@ -18,7 +21,7 @@ const Offer = ({currentFilm}) => {
             genres: ['драма', 'криминал', 'триллер']
         },
         {
-            offer: 'https://images.hdqwalls.com/wallpapers/harry-potter-20th-anniversary-return-to-hogwarts-2023-l2.jpg',
+            offer: haryyPotterBg,
             nameEn: 'HARRY POTTER ',
             year: '2022',
             rating: '8',
@@ -27,7 +30,7 @@ const Offer = ({currentFilm}) => {
                 'документальный', 'семейный']
         },
         {
-            offer: 'https://vnnews.ru/wp-content/uploads/2022/11/Avatar.webp',
+            offer: avatarBg,
             nameEn: 'Avatar',
             year: '2022',
             rating: '9',
